@@ -1,7 +1,7 @@
-# <h1 align="center"> LRANet: Towards Accurate and Efficient Scene Text Detection with Low-Rank Approximation Network </h1> 
+# <h1 align="center"> SG-LRA: Self-Generating Automatic Scoliosis Cobb Angle Measurement with Low-Rank Approximation</h1> 
 
 <div align="center">
-    <img src="figs/framework.pdf" width="80%">
+    <img src="figs/framework.png" width="80%">
 </div>
 
 ## Introduction
@@ -10,11 +10,11 @@ This is the official implementation of Paper: [SG-LRA: Self-Generating Automatic
 
 ## Function
 
-Reproducing the code will give you the following functions: 
-Function 1. Ask SG-LRA to generate an X-ray image for you (based on the distribution characteristics of our private dataset Spinal2023), and you can continue to complete Function 3, or generate an entire dataset and continue to complete Function 4.
-Function 2. Provide a private spine X-ray dataset, train the generation module, and SG-LRA to generate X-ray images based on your own data features, continuing to complete Function 3 or Function 4.
-Function 3. Provide a private or SG-LRA generated spine X-ray image, and SG-LRA will automatically detect spinal landmarks, Cobb angles, and visualize the results. 
-Function 4. Provide your private or SG-LRA generated unlabeled spine X-ray dataset, and SG-LRA will use the Data Engine proposed in the paper to generate relatively usable data annotations for the dataset.
+Reproducing the code will give you the following functions: <br>
+Function 1. Ask SG-LRA to generate an X-ray image for you (based on the distribution characteristics of our private dataset Spinal2023), and you can continue to complete Function 3, or generate an entire dataset and continue to complete Function 4.<br>
+Function 2. Provide a private spine X-ray dataset, train the generation module, and SG-LRA to generate X-ray images based on your own data features, continuing to complete Function 3 or Function 4.<br>
+Function 3. Provide a private or SG-LRA generated spine X-ray image, and SG-LRA will automatically detect spinal landmarks, Cobb angles, and visualize the results. <br>
+Function 4. Provide your private or SG-LRA generated unlabeled spine X-ray dataset, and SG-LRA will use the Data Engine proposed in the paper to generate relatively usable data annotations for the dataset.<br>
  
 ## Environment
 
@@ -62,8 +62,8 @@ data
 
 ## Function1
 ```
-CUDA_VISIBLE_DEVICES=0 ./tools/dist_train.sh configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal_1 1
-CUDA_VISIBLE_DEVICES=0 ./tools/train.py configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal_1 1
+CUDA_VISIBLE_DEVICES=0 ./tools/dist_train.sh configs/chenchen_spinal_det.py work_dirs/chenchen_spinal_1 1
+
 ```
 
 ## Function2
@@ -71,8 +71,17 @@ CUDA_VISIBLE_DEVICES=0 ./tools/train.py configs/lranet/chenchen_spinal_det.py wo
 CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal/latest.pth --eval hmean-e2e
 ```
 
-## Trained Model
-Total-Text : [One Drive](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvYy81YWE2OWZiZTU4NDY0MDYxL0VZdmxkOXBEWUFGSnM2SERNNWFscWFjQlRpejVtWG5WZmxoQ1JiUFlmX0x1SXc%5FZT1rY3RBa3k&cid=5AA69FBE58464061&id=5AA69FBE58464061%21sda77e58b60434901b3a1c33396a5a9a7&parId=root&o=OneUp)
+## Function3
+```
+CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal/latest.pth --eval hmean-e2e
+```
+
+## Function4
+```
+CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal/latest.pth --eval hmean-e2e
+```
+
+
 
 
 ## Acknowledgement
