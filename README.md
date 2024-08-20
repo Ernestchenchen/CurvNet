@@ -61,24 +61,25 @@ data
 ```
 
 ## Function1
+Before executing the instructions, you need to place the images or dataset in the /original-X-ray folder, and wait for the output results from the /generation-X-ray folder.
 ```
-CUDA_VISIBLE_DEVICES=0 ./tools/dist_train.sh configs/chenchen_spinal_det.py work_dirs/chenchen_spinal_1 1
-
+python .\x-ray_generate\xray_test_noinput.py
 ```
 
 ## Function2
+You may need to re-adjust the weight file paths or re-initialize the weights to obtain weights that are suitable for your own dataset.
 ```
-CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal/latest.pth --eval hmean-e2e
+python .\x-ray_generate\train_unet_only_Xray_Pipeline.py
 ```
 
 ## Function3
 ```
-CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal/latest.pth --eval hmean-e2e
+CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/spinal_det.py work_dirs/spinal_det/latest.pth --eval hmean-e2e
 ```
 
 ## Function4
 ```
-CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/lranet/chenchen_spinal_det.py work_dirs/chenchen_spinal/latest.pth --eval hmean-e2e
+CUDA_VISIBLE_DEVICES=0 ./tools/train.py configs/spinal_det.py  --work-dir work_dirs/spinal_det
 ```
 
 
