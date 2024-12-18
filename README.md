@@ -17,7 +17,7 @@ Regardless of your specific needs, you will need to complete the following depen
 ```
 conda create -n SG-LRA python=3.7 -y
 conda activate SG-LRA
- conda install pytorch=1.8 torchvision cudatoolkit=11.1 -c pytorch -c nvidia -c conda-forge
+conda install pytorch=1.8 torchvision cudatoolkit=11.1 -c pytorch -c nvidia -c conda-forge
 pip install mmcv-full==1.3.9 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.8.0/index.html
 pip install mmdet==2.14.0
 git clone https://github.com/Ernestchenchen/SG-LRA
