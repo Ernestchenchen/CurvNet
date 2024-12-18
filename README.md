@@ -39,27 +39,24 @@ Please download and extract the above datasets into the `data` folder following 
 ```
 data
 ├─Spinal-AI2024
-│  │ Spinal-AI2024_train.json
+│  ├─Spinal-AI2024_train.json
 │  └─train
-│  │ Spinal-AI2024_test.json
+│  ├─Spinal-AI2024_test.json
 │  └─test
 ├─Your_Custom_Dataset
-│  │ Your_Custom_train.json
+│  ├─Your_Custom_train.json
 │  └─train
-│  │ Your_Custom_test.json
+│  ├─Your_Custom_test.json
 │  └─test
-├─sample_data
-│  │ sample_data_train.json
-│  └─train
 ```
 
 ## Function 1
 
 Ask SG-LRA to generate an X-ray image for you (based on the distribution characteristics of our private dataset Spinal2023), and you can continue to complete Function 3, or generate an entire dataset and continue to complete Function 4.
 
-Before executing the instructions, you need to place the images or dataset in the /original-X-ray folder, and wait for the output results from the x-ray_generation folder.
+Before executing the instructions, you need to place the images or dataset in the /original-X-ray folder, and wait for the output results from the x-ray_generate folder.
 ```
-python .\x-ray_generation\xray_test_noinput.py
+python x-ray_generation/x-ray_generate/xray_test_noinput.py
 ```
 
 ## Function 2
@@ -68,7 +65,7 @@ Provide a private spine X-ray dataset, train the generation module, and SG-LRA t
 
 You may need to re-adjust the weight file paths or re-initialize the weights to obtain weights that are suitable for your own dataset.
 ```
-python .\x-ray_generation\train_unet_only_Xray_Pipeline.py
+python x-ray_generation/x-ray_generate/train_unet_only_Xray_Pipeline.py
 ```
 
 ## Function 3
@@ -82,7 +79,7 @@ CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/spinal_det.py work_dirs/spin
 
 Provide your private or SG-LRA generated unlabeled spine X-ray dataset, and SG-LRA will use the Data Engine proposed in the paper to generate relatively usable data annotations for the dataset.
 ```
-CUDA_VISIBLE_DEVICES=0 ./tools/train.py configs/spinal_det.py  --work-dir work_dirs/spinal_det
+CUDA_VISIBLE_DEVICES=0 tools/train.py configs/spinal_det.py  --work-dir work_dirs/spinal_det
 ```
 
 
