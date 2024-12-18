@@ -31,7 +31,7 @@ python setup.py build develop
 You have the following options for your spinal X-ray dataset:
 
 Prepare your own private spinal X-ray dataset.
-Download our open-source [Spinal-AI2024](https://anonymous.4open.science/r/Spinal-AI2024) dataset.
+Download our open-source [Spinal-AI2024](https://github.com/Ernestchenchen/Spinal-AI2024) dataset.
 Additionally, our code provides sample data that can be used for testing purposes.
 
 
