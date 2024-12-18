@@ -11,7 +11,7 @@ This is the official implementation of Paper [SG-LRA: Self-Generating Automatic 
  
 ## Environment
 
-Regardless of your specific needs, you will need to complete the following dependency installations. It is recommended to use a virtual [Anaconda](https://www.anaconda.com/) environment to manage your environment setup. Run the following commands to install dependencies.
+Regardless of your specific needs, you will need to complete the following dependency installations. It is recommended to use a virtual [conda](https://www.anaconda.com/) environment to manage your environment setup. Run the following commands to install dependencies.
 
 
 ```
