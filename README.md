@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This is the official implementation of Paper SG-LRA: Self-Generating Automatic Scoliosis Cobb Angle Measurement with Low-Rank Approximation[https://arxiv.org/abs/2411.12604], which is built upon mmocr-0.2.1. SG-LRA is a framework with self-generative capabilities for automatic measurement of spinal scoliosis Cobb angles.
+This is the official implementation of Paper [SG-LRA: Self-Generating Automatic Scoliosis Cobb Angle Measurement with Low-Rank Approximation](https://arxiv.org/abs/2411.12604), which is built upon mmocr-0.2.1. SG-LRA is a framework with self-generative capabilities for automatic measurement of spinal scoliosis Cobb angles.
 
 ## Function
 
