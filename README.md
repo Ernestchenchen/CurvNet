@@ -57,9 +57,9 @@ data
 
 Ask SG-LRA to generate an X-ray image for you (based on the distribution characteristics of our private dataset Spinal2023), and you can continue to complete Function 3, or generate an entire dataset and continue to complete Function 4.
 
-Before executing the instructions, you need to place the images or dataset in the /original-X-ray folder, and wait for the output results from the /generation-X-ray folder.
+Before executing the instructions, you need to place the images or dataset in the /original-X-ray folder, and wait for the output results from the x-ray_generation folder.
 ```
-python .\x-ray_generate\xray_test_noinput.py
+python .\x-ray_generation\xray_test_noinput.py
 ```
 
 ## Function 2
@@ -68,7 +68,7 @@ Provide a private spine X-ray dataset, train the generation module, and SG-LRA t
 
 You may need to re-adjust the weight file paths or re-initialize the weights to obtain weights that are suitable for your own dataset.
 ```
-python .\x-ray_generate\train_unet_only_Xray_Pipeline.py
+python .\x-ray_generation\train_unet_only_Xray_Pipeline.py
 ```
 
 ## Function 3
