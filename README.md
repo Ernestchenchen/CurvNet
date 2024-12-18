@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This is the official implementation of Paper: [SG-LRA: Self-Generating Automatic Scoliosis Cobb Angle Measurement with Low-Rank Approximation]. The implementation is based on [LRANet: Towards Accurate and Efficient Scene Text Detection with Low-Rank Approximation Network](https://arxiv.org/abs/2306.15142.pdf) (AAAI 2024 Oral), which is built upon mmocr-0.2.1. SG-Lra is a network framework with self-generative capabilities for automatic measurement of spinal scoliosis Cobb angles.
+This is the official implementation of Paper: [SG-LRA: Self-Generating Automatic Scoliosis Cobb Angle Measurement with Low-Rank Approximation], which is built upon mmocr-0.2.1. SG-LRA is a framework with self-generative capabilities for automatic measurement of spinal scoliosis Cobb angles.
 
 ## Function
 
@@ -27,8 +27,8 @@ conda activate SG-LRA
  conda install pytorch=1.8 torchvision cudatoolkit=11.1 -c pytorch -c nvidia -c conda-forge
 pip install mmcv-full==1.3.9 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.8.0/index.html
 pip install mmdet==2.14.0
-git clone 
-cd LSG-LRA
+git clone https://github.com/Ernestchenchen/SG-LRA
+cd SG-LRA
 pip install -r requirements.txt
 python setup.py build develop
 ```
