@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This is the official implementation of our Pattern Recognition journal paper [CurvNet: Latent Contour Representation and Iterative Data Engine for Curvature Angle Estimation](https://arxiv.org/abs/2411.12604), which is built upon mmocr-0.2.1. CurvNet is a framework with self-generative capabilities for automatic measurement of spinal scoliosis Cobb angles.
+This is the official implementation of our Pattern Recognition journal paper [CurvNet: Latent Contour Representation and Iterative Data Engine for Curvature Angle Estimation](https://arxiv.org/abs/2411.12604), which is built upon mmocr-0.2.1. CurvNet is a framework with self-generative capabilities for automatic measurement of scoliosis Cobb angles.
 
  
 ## Environment
